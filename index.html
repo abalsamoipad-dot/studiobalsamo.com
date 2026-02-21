@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="it" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Balsamo – Crisi d'impresa e consulenza aziendale</title>
+  <meta name="description" content="Studio Balsamo - dottori commercialisti specializzati in gestione della crisi d'impresa, ristrutturazione dei debiti, adeguati assetti organizzativi, pianificazione fiscale e consulenza finanziaria." />
+  <meta name="keywords" content="crisi d'impresa, ristrutturazione debiti, assetti organizzativi, commercialista Firenze, commercialista Caltanissetta, commercialista Agrigento, consulenza aziendale, codice crisi impresa" />
+  <meta name="author" content="Studio Balsamo" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Studio Balsamo – Crisi d'impresa e consulenza aziendale" />
+  <meta property="og:description" content="Dottori commercialisti specializzati in gestione della crisi d'impresa, ristrutturazione dei debiti e adeguati assetti organizzativi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+  <!-- Favicon (SVG inline) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='none' stroke='%230284c7' stroke-width='4'/%3E%3Cpath d='M72 58C72 58 95 44 112 56C126 66 118 80 100 84C82 88 68 92 68 108C68 124 84 136 108 132' fill='none' stroke='%231e3a8a' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M88 52L88 148' fill='none' stroke='%230284c7' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M88 52L110 52C130 52 136 66 126 76C120 82 110 84 88 84' fill='none' stroke='%230284c7' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M88 84L112 84C138 84 144 102 130 114C122 120 112 122 88 122' fill='none' stroke='%230284c7' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --primary-blue: #0284c7;
+      --deep-blue: #2563eb;
+      --light-blue: #38bdf8;
+      --dark-slate: #0f172a;
+      --medium-slate: #475569;
+      --light-slate: #f1f5f9;
+      --text-dark: #020617;
+      --text-light: #64748b;
+      --white: #ffffff;
+      --border-color: #e2e8f0;
+      --pattern-dots: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle fill='%23475569' fill-opacity='0.1' cx='10' cy='10' r='1'/%3E%3C/svg%3E");
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--white);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Accessibilita: focus visibile */
+    a:focus-visible,
+    button:focus-visible,
+    .cta-button:focus-visible,
+    .submit-button:focus-visible {
+      outline: 2px solid var(--deep-blue);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--deep-blue);
+      color: white;
+      padding: 8px 16px;
+      z-index: 200;
+      transition: top 0.3s;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 0;
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo:hover {
+      opacity: 0.85;
+    }
+
+    .logo svg {
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      filter: drop-shadow(0 2px 6px rgba(2,132,199,0.2));
+    }
+
+    .logo:hover svg {
+      transform: scale(1.06);
+    }
+
+    .logo-text-main {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.2;
+    }
+
+    .logo-text-sub {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--medium-slate);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-blue);
+    }
+
+    .nav-cta {
+      background-color: var(--primary-blue);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    .nav-cta:hover {
+      background-color: var(--deep-blue) !important;
+      color: var(--white) !important;
+    }
+
+    .nav-cta:active {
+      transform: scale(0.98);
+    }
+
+    .mobile-menu-button {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--dark-slate);
+      padding: 8px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-color: var(--dark-slate);
+      text-align: center;
+      padding: 140px 20px 130px;
+      overflow: hidden;
+      color: var(--white);
+    }
+
+    /* Video Background */
+    .hero-video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.90) 100%);
+      z-index: 1;
+    }
+
+    .hero > .container {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .hero-kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #bfdbfe;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #e5f0ff;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero .cta-button {
+      display: inline-block;
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 15px 30px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero .cta-button:hover {
+      background-color: var(--deep-blue);
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+    }
+
+    .hero-note {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #focus::before, #servizi::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: var(--pattern-dots);
+      z-index: 0;
+    }
+
+    .section > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-gray {
+      background-color: var(--light-slate);
+    }
+
+    .section-header {
+      max-width: 750px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      text-align: left;
+    }
+
+    .section-subtitle {
+      font-size: 1.02rem;
+      color: var(--text-light);
+      text-align: left;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 26px 24px 20px;
+      text-align: left;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: var(--bg-pattern);
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      z-index: -1;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+      border-color: #cbd5e1;
+    }
+
+    .service-card:hover::before {
+      opacity: 0.06;
+    }
+
+    .service-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      background-color: #e0f2fe;
+    }
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary-blue);
+    }
+
+    .service-card .chip {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      align-self: flex-start;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: var(--text-dark);
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    .service-meta {
+      margin-top: auto;
+      padding-top: 8px;
+      font-size: 0.85rem;
+      color: var(--medium-slate);
+      font-weight: 500;
+    }
+
+    /* ===== FONDATORE Section ===== */
+    .founder-section {
+      background: linear-gradient(135deg, var(--dark-slate) 0%, #1e293b 50%, #0f2847 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative animated background */
+    .founder-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(2,132,199,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatOrb 12s ease-in-out infinite;
+    }
+    .founder-section::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatOrb 15s ease-in-out infinite reverse;
+    }
+
+    @keyframes floatOrb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -20px) scale(1.05); }
+      66% { transform: translate(-20px, 15px) scale(0.95); }
+    }
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Photo side with decorative elements */
+    .founder-photo-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .founder-photo-frame {
+      position: relative;
+      width: 320px;
+      height: 400px;
+    }
+
+    /* Decorative ring behind photo */
+    .founder-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      border: 2px solid rgba(56, 189, 248, 0.2);
+      border-radius: 24px;
+      transform: rotate(3deg);
+      animation: subtleRotate 20s linear infinite;
+    }
+    .founder-photo-frame::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border: 1px solid rgba(2, 132, 199, 0.3);
+      border-radius: 20px;
+      transform: rotate(-2deg);
+    }
+
+    @keyframes subtleRotate {
+      0% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+      100% { transform: rotate(3deg); }
+    }
+
+    .founder-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease;
+    }
+
+    .founder-photo:hover {
+      transform: scale(1.02) translateY(-4px);
+      box-shadow: 0 35px 70px rgba(0,0,0,0.5);
+    }
+
+    /* Floating accent badge */
+    .founder-badge {
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      z-index: 3;
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+      color: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 8px 25px rgba(2,132,199,0.4);
+      line-height: 1.2;
+      text-align: center;
+      animation: pulseBadge 3s ease-in-out infinite;
+    }
+    .founder-badge span {
+      font-size: 1.4rem;
+      font-weight: 800;
+      display: block;
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+
+    /* Content side */
+    .founder-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .founder-content .section-kicker {
+      color: var(--light-blue);
+    }
+
+    .founder-name {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 4px;
+      line-height: 1.15;
+    }
+
+    .founder-title {
+      font-size: 1.1rem;
+      color: var(--light-blue);
+      font-weight: 500;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .founder-title::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--light-blue);
+    }
+
+    .founder-bio {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+
+    /* Stats row */
+    .founder-stats {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--light-blue);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+
+    /* Specializations tags */
+    .founder-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .founder-tag {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #bae6fd;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    }
+
+    .founder-tag:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: rgba(56, 189, 248, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* ===== NETWORK / Collaboratori Section ===== */
+    .network-section {
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .network-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: var(--pattern-dots);
+      z-index: 0;
+    }
+
+    .network-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .network-intro p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* Animated network visual */
+    .network-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      position: relative;
+      height: 260px;
+    }
+
+    .network-hub {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      box-shadow: 0 8px 30px rgba(2,132,199,0.35);
+      animation: pulseHub 3s ease-in-out infinite;
+    }
+    .network-hub svg {
+      width: 36px;
+      height: 36px;
+      color: white;
+    }
+
+    @keyframes pulseHub {
+      0%, 100% { box-shadow: 0 8px 30px rgba(2,132,199,0.35); }
+      50% { box-shadow: 0 8px 50px rgba(2,132,199,0.55), 0 0 0 15px rgba(2,132,199,0.08); }
+    }
+
+    /* Orbiting nodes */
+    .network-orbit {
+      position: absolute;
+      border: 1px dashed rgba(2,132,199,0.2);
+      border-radius: 50%;
+      animation: spinOrbit 40s linear infinite;
+    }
+    .network-orbit-1 {
+      width: 200px;
+      height: 200px;
+    }
+    .network-orbit-2 {
+      width: 340px;
+      height: 340px;
+      animation-duration: 55s;
+      animation-direction: reverse;
+    }
+    .network-orbit-3 {
+      width: 470px;
+      height: 470px;
+      animation-duration: 70s;
+      border-style: dotted;
+      border-color: rgba(2,132,199,0.12);
+    }
+
+    @keyframes spinOrbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .orbit-node {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      /* Counter-rotate to keep icons upright */
+      animation: counterSpin 40s linear infinite;
+    }
+    .network-orbit-2 .orbit-node { animation-duration: 55s; animation-direction: reverse; }
+    .network-orbit-3 .orbit-node { animation-duration: 70s; }
+
+    @keyframes counterSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    .orbit-node svg {
+      width: 22px;
+      height: 22px;
+      color: var(--primary-blue);
+    }
+
+    /* Node positions on the orbits */
+    .orbit-node:nth-child(1) { top: -24px; left: calc(50% - 24px); }
+    .orbit-node:nth-child(2) { bottom: -24px; left: calc(50% - 24px); }
+    .orbit-node:nth-child(3) { top: calc(50% - 24px); right: -24px; }
+    .orbit-node:nth-child(4) { top: calc(50% - 24px); left: -24px; }
+    .orbit-node:nth-child(5) { top: 10%; right: 5%; }
+
+    /* Professional areas grid */
+    .collab-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .collab-card {
+      text-align: center;
+      padding: 28px 16px 22px;
+      border-radius: 16px;
+      background: var(--light-slate);
+      border: 1px solid transparent;
+      transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .collab-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-blue), var(--light-blue));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .collab-card:hover {
+      background: var(--white);
+      border-color: var(--border-color);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+    }
+
+    .collab-card:hover::before {
+      opacity: 1;
+    }
+
+    .collab-icon {
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .collab-card:hover .collab-icon {
+      transform: scale(1.1) rotate(-3deg);
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+    }
+
+    .collab-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--primary-blue);
+      transition: color 0.3s;
+    }
+
+    .collab-card:hover .collab-icon svg {
+      color: white;
+    }
+
+    .collab-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .collab-card p {
+      font-size: 0.83rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* Responsive founder & network */
+    @media (max-width: 900px) {
+      .founder-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .founder-photo-wrapper { order: -1; }
+      .founder-photo-frame {
+        width: 260px;
+        height: 320px;
+        margin: 0 auto;
+      }
+      .founder-title { justify-content: center; }
+      .founder-tags { justify-content: center; }
+      .founder-stats { justify-content: center; }
+      .collab-grid { grid-template-columns: repeat(2, 1fr); }
+      .network-visual { height: 220px; }
+      .network-orbit-3 { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .founder-name { font-size: 1.9rem; }
+      .founder-stats { gap: 15px; flex-wrap: wrap; }
+      .stat-number { font-size: 1.5rem; }
+      .collab-grid { grid-template-columns: 1fr; }
+      .founder-photo-frame {
+        width: 220px;
+        height: 280px;
+      }
+      .network-visual { height: 180px; }
+      .network-orbit-2, .network-orbit-3 { display: none; }
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    .contact-info h3, .contact-form h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .contact-detail-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e0f2fe;
+      flex-shrink: 0;
+    }
+    .contact-detail-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-blue);
+    }
+
+    .contact-detail a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .contact-detail a:hover {
+      color: var(--primary-blue);
+    }
+
+    .sedi-info {
+      margin-top: 25px;
+      padding: 20px;
+      background-color: var(--light-slate);
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-blue);
+    }
+    .sedi-info strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+    .sedi-info p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      color: var(--medium-slate);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 5px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-button {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 12px 25px;
+      border-radius: 999px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    }
+    .submit-button:hover {
+      background-color: var(--deep-blue);
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+    }
+    .submit-button:active {
+      transform: scale(0.98);
+    }
+    .submit-button:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    /* Feedback del form */
+    .form-feedback {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      min-height: 1.2em;
+    }
+    .form-feedback.is-pending {
+      color: #1d4ed8;
+    }
+    .form-feedback.is-success {
+      color: #0f766e;
+      background-color: #ecfdf5;
+      border-radius: 6px;
+      padding: 8px 10px;
+      border: 1px solid #34d399;
+    }
+    .form-feedback.is-error {
+      color: #b91c1c;
+      background-color: #fef2f2;
+      border-radius: 6px;
+      padding: 8px 10px;
+      border: 1px solid #fecaca;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--dark-slate);
+      color: #cbd5e1;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-brand .logo-text-main {
+      color: var(--white);
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--light-blue);
+    }
+
+    .footer-col p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Animation */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .service-card.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+    .service-card.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+    .service-card.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+    .service-card.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+    .service-card.animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+    .collab-card.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+    .collab-card.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+    .collab-card.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 90;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s, transform 0.3s, background-color 0.3s;
+      pointer-events: none;
+    }
+    .back-to-top.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .back-to-top:hover {
+      background: var(--deep-blue);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 12px 20px 16px;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        padding: 6px 0;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .hero { padding: 100px 20px 90px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+
+      .section-header {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.9rem; }
+    }
+
+    /* Prefers reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+  <header class="header" role="banner">
+    <div class="container">
+      <a href="#hero" class="logo" aria-label="Studio Balsamo - Torna alla homepage">
+        <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0284c7"/>
+              <stop offset="100%" stop-color="#1e3a8a"/>
+            </linearGradient>
+          </defs>
+          <!-- Outer circle -->
+          <circle cx="100" cy="100" r="95" fill="none" stroke="url(#logo-grad)" stroke-width="3"/>
+          <!-- Inner decorative circle -->
+          <circle cx="100" cy="100" r="85" fill="none" stroke="#0284c7" stroke-width="0.8" opacity="0.3"/>
+          <!-- Intertwined S and B monogram -->
+          <!-- S - drawn as elegant serif path -->
+          <path d="M72 58 C72 58, 95 44, 112 56 C126 66, 118 80, 100 84 C82 88, 68 92, 68 108 C68 124, 84 136, 108 132"
+                fill="none" stroke="#1e3a8a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- S serifs -->
+          <line x1="62" y1="58" x2="82" y2="58" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round"/>
+          <line x1="98" y1="132" x2="118" y2="132" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round"/>
+          <!-- B - vertical stem and bowls, slightly overlapping S -->
+          <path d="M88 52 L88 148" fill="none" stroke="#0284c7" stroke-width="7" stroke-linecap="round"/>
+          <!-- B top bowl -->
+          <path d="M88 52 L110 52 C130 52, 136 66, 126 76 C120 82, 110 84, 88 84"
+                fill="none" stroke="#0284c7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- B bottom bowl (larger) -->
+          <path d="M88 84 L112 84 C138 84, 144 102, 130 114 C122 120, 112 122, 88 122"
+                fill="none" stroke="#0284c7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- B bottom serif -->
+          <line x1="82" y1="148" x2="98" y2="148" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+          <!-- Top decorative dot -->
+          <circle cx="100" cy="20" r="3" fill="#0284c7"/>
+          <!-- Bottom decorative dot -->
+          <circle cx="100" cy="180" r="3" fill="#0284c7"/>
+        </svg>
+        <div>
+          <div class="logo-text-main">Studio Balsamo</div>
+          <div class="logo-text-sub">Crisi d'impresa e consulenza</div>
+        </div>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Navigazione principale">
+        <a href="#focus">Ambiti</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#team">Il Fondatore</a>
+        <a href="#contatti">Contatti</a>
+        <a href="#contatti" class="nav-cta">Richiedi Appuntamento</a>
+      </nav>
+      <button class="mobile-menu-button" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="main-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <!-- Video Background - file locale -->
+      <div class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" id="hero-video-el">
+          <source src="veo-video-4.mp4" type="video/mp4">
+          <source src="veo-video-5.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-kicker">Crisi d'impresa &middot; Ristrutturazione &middot; Assetti organizzativi</div>
+        <h1 class="animate-on-scroll">Guidiamo le imprese oltre la crisi, verso un futuro stabile</h1>
+        <p class="animate-on-scroll" style="transition-delay: 0.1s;">
+          Lo Studio Balsamo offre consulenza specialistica per la gestione della crisi d'impresa, la ristrutturazione dei debiti
+          e la definizione di adeguati assetti organizzativi, amministrativi e contabili.
+        </p>
+        <div class="hero-actions animate-on-scroll" style="transition-delay: 0.2s;">
+          <a href="#contatti" class="cta-button">Richiedi una consulenza</a>
+          <p class="hero-note">Lo Studio riceve su appuntamento a Firenze, Caltanissetta e Agrigento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMBITI DI INTERVENTO -->
+    <section id="focus" class="section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-kicker">Ambiti di intervento</div>
+          <h2 class="section-title">Dove interveniamo per preservare la continuità aziendale</h2>
+          <p class="section-subtitle">
+            Affianchiamo l'imprenditore nei momenti più delicati, con un approccio strutturato
+            che parte dall'analisi preliminare della crisi e arriva alla definizione di soluzioni
+            concrete e sostenibili.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+            </div>
+            <span class="chip">Crisi d'impresa</span>
+            <h3>Analizziamo le cause della crisi</h3>
+            <p>
+              Individuiamo gli squilibri economici, patrimoniali e finanziari e impostiamo
+              un'analisi preliminare strutturata, essenziale per scegliere il percorso di risanamento più idoneo.
+            </p>
+            <div class="service-meta">Orientato a: PMI in difficoltà e imprese in fase di rilancio.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+            </div>
+            <span class="chip">Organizzazione</span>
+            <h3>Progettiamo assetti adeguati</h3>
+            <p>
+              Disegniamo o aggiorniamo gli assetti organizzativi, amministrativi e contabili
+              per assicurare controllo interno, conformità normativa e processi decisionali chiari.
+            </p>
+            <div class="service-meta">Orientato a: imprese che vogliono prevenire o gestire la crisi.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+            </div>
+            <span class="chip">Controllo</span>
+            <h3>Verifichiamo i dati con rigore</h3>
+            <p>
+              Eseguiamo due diligence e revisioni mirate per presidiare la qualità delle informazioni
+              e creare un dialogo affidabile con il ceto creditorio e gli investitori.
+            </p>
+            <div class="service-meta">Orientato a: operazioni straordinarie e rapporti con finanziatori.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section id="servizi" class="section section-gray">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-kicker">Servizi dello Studio</div>
+          <h2 class="section-title">Soluzioni integrate per crisi, ristrutturazione e governance</h2>
+          <p class="section-subtitle">
+            Offriamo una gamma completa di servizi per supportare l'impresa nelle fasi di crisi,
+            nella ristrutturazione dei debiti e nella definizione di assetti organizzativi, fiscali
+            e contabili solidi e trasparenti.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+            </div>
+            <span class="chip">Crisi d'impresa</span>
+            <h3>Gestiamo il percorso di risanamento</h3>
+            <p>
+              Analizziamo la situazione aziendale, definiamo scenari realistici e predisponiamo piani di risanamento
+              orientati alla continuità, nel rispetto della normativa concorsuale.
+            </p>
+            <div class="service-meta">Orientato a: imprese in crisi o in pre-crisi.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg>
+            </div>
+            <span class="chip">Ristrutturazione</span>
+            <h3>Rinegoziamo il debito con metodo</h3>
+            <p>
+              Strutturiamo proposte di ristrutturazione e piani di rientro sostenibili, curando il dialogo con banche
+              e fornitori e valorizzando un rapporto trasparente con il ceto creditorio.
+            </p>
+            <div class="service-meta">Orientato a: imprese con esposizioni significative verso i creditori.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+            </div>
+            <span class="chip">Assetti organizzativi</span>
+            <h3>Strutturiamo la governance aziendale</h3>
+            <p>
+              Progettiamo assetti organizzativi e procedure interne che consentano di intercettare
+              per tempo gli squilibri e supportare le decisioni dell'organo amministrativo.
+            </p>
+            <div class="service-meta">Orientato a: società di capitali e gruppi in evoluzione.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286z" /></svg>
+            </div>
+            <span class="chip">Fisco e contabilità</span>
+            <h3>Curiamo gli adempimenti con precisione</h3>
+            <p>
+              Gestiamo la pianificazione fiscale e la corretta tenuta delle scritture, assicurando
+              conformità normativa e qualità dell'informazione economico-finanziaria.
+            </p>
+            <div class="service-meta">Orientato a: imprese strutturate e professionisti.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>
+            </div>
+            <span class="chip">Finanza</span>
+            <h3>Supportiamo le scelte finanziarie</h3>
+            <p>
+              Valutiamo le opzioni di finanziamento, la gestione del capitale circolante e l'equilibrio
+              tra fonti e impieghi, in coerenza con il piano industriale.
+            </p>
+            <div class="service-meta">Orientato a: imprese in crescita e realtà in trasformazione.</div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+            </div>
+            <span class="chip">Successione</span>
+            <h3>Pianifichiamo il passaggio generazionale</h3>
+            <p>
+              Progettiamo percorsi di successione o cessione d'azienda, curando profili economici,
+              patrimoniali e fiscali per garantire continuità e tutela del patrimonio.
+            </p>
+            <div class="service-meta">Orientato a: imprese familiari e passaggi generazionali.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FONDATORE -->
+    <section id="team" class="section founder-section">
+      <div class="container">
+        <div class="founder-layout">
+          <!-- Foto -->
+          <div class="founder-photo-wrapper animate-on-scroll">
+            <div class="founder-photo-frame">
+              <img src="Me.png" alt="Dott. Antonio Balsamo - Fondatore dello Studio Balsamo" class="founder-photo" loading="lazy" width="320" height="400" />
+              <div class="founder-badge">
+                <svg width="36" height="36" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+                  <path d="M72 58C72 58 95 44 112 56C126 66 118 80 100 84C82 88 68 92 68 108C68 124 84 136 108 132" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="8" stroke-linecap="round"/>
+                  <path d="M88 52L88 148" fill="none" stroke="#bae6fd" stroke-width="8" stroke-linecap="round"/>
+                  <path d="M88 52L110 52C130 52 136 66 126 76C120 82 110 84 88 84" fill="none" stroke="#bae6fd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M88 84L112 84C138 84 144 102 130 114C122 120 112 122 88 122" fill="none" stroke="#bae6fd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span style="font-size:0.55rem; margin-top:1px;">Fondatore</span>
+              </div>
+            </div>
+          </div>
+          <!-- Contenuto -->
+          <div class="founder-content animate-on-scroll" style="transition-delay: 0.15s;">
+            <div class="section-kicker">Il Fondatore</div>
+            <h2 class="founder-name">Dott. Antonio Balsamo</h2>
+            <div class="founder-title">Dottore Commercialista &middot; Revisore Legale</div>
+            <p class="founder-bio">
+              Da oltre vent'anni, il Dott. Antonio Balsamo affianca imprenditori e aziende
+              nei momenti di maggiore complessità. Lo Studio nasce dalla convinzione che ogni crisi
+              possa trasformarsi in un'opportunità di rilancio, attraverso un metodo rigoroso,
+              una visione strategica chiara e un rapporto di fiducia con l'imprenditore.
+            </p>
+            <div class="founder-stats animate-on-scroll" style="transition-delay: 0.25s;">
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Anni di esperienza</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Sedi operative</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Imprese assistite</span>
+              </div>
+            </div>
+            <div class="founder-tags animate-on-scroll" style="transition-delay: 0.35s;">
+              <span class="founder-tag">Crisi d'impresa</span>
+              <span class="founder-tag">Ristrutturazione debiti</span>
+              <span class="founder-tag">Adeguati assetti</span>
+              <span class="founder-tag">Revisione legale</span>
+              <span class="founder-tag">Codice della crisi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RETE DI COLLABORATORI -->
+    <section id="network" class="section network-section">
+      <div class="container">
+        <div class="section-header animate-on-scroll" style="text-align: center;">
+          <div class="section-kicker" style="text-align: center;">Rete professionale</div>
+          <h2 class="section-title" style="text-align: center;">Un network di competenze al servizio dell'impresa</h2>
+        </div>
+        <div class="network-intro animate-on-scroll">
+          <p>
+            Lo Studio opera in sinergia con un'ampia rete di professionisti qualificati &mdash;
+            avvocati, consulenti del lavoro, notai, periti e revisori &mdash; selezionati per competenza
+            e affidabilità. Questo approccio multidisciplinare consente di offrire soluzioni
+            integrate e personalizzate, coprendo ogni aspetto della gestione aziendale.
+          </p>
+        </div>
+
+        <!-- Animated network visualization -->
+        <div class="network-visual animate-on-scroll" style="transition-delay: 0.1s;">
+          <!-- Central hub -->
+          <div class="network-hub">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+            </svg>
+          </div>
+          <!-- Orbit 1 -->
+          <div class="network-orbit network-orbit-1">
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.589-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.589-1.202L5.25 4.971z" /></svg>
+            </div>
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+            </div>
+          </div>
+          <!-- Orbit 2 -->
+          <div class="network-orbit network-orbit-2">
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" /></svg>
+            </div>
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286z" /></svg>
+            </div>
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" /></svg>
+            </div>
+          </div>
+          <!-- Orbit 3 -->
+          <div class="network-orbit network-orbit-3">
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
+            </div>
+            <div class="orbit-node">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional areas -->
+        <div class="collab-grid">
+          <div class="collab-card animate-on-scroll">
+            <div class="collab-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.589-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.589-1.202L5.25 4.971z" /></svg>
+            </div>
+            <h4>Area Legale</h4>
+            <p>Avvocati specializzati in diritto societario, fallimentare e contrattuale</p>
+          </div>
+          <div class="collab-card animate-on-scroll">
+            <div class="collab-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+            </div>
+            <h4>Lavoro e Previdenza</h4>
+            <p>Consulenti del lavoro per la gestione del personale e le vertenze</p>
+          </div>
+          <div class="collab-card animate-on-scroll">
+            <div class="collab-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" /></svg>
+            </div>
+            <h4>Perizie e Stime</h4>
+            <p>Periti e valutatori per stime immobiliari, aziendali e peritali</p>
+          </div>
+          <div class="collab-card animate-on-scroll">
+            <div class="collab-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286z" /></svg>
+            </div>
+            <h4>Revisione e Compliance</h4>
+            <p>Revisori legali e specialisti per audit interni e conformità normativa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section section-gray">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="section-kicker">Contatti</div>
+          <h2 class="section-title">Come mettersi in contatto con lo Studio</h2>
+          <p class="section-subtitle">
+            Per fissare un appuntamento o per richiedere una prima valutazione della situazione aziendale,
+            potete utilizzare i recapiti riportati o il modulo di contatto qui sotto.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info animate-on-scroll">
+            <h3>Contatti e sedi</h3>
+            <p>
+              Gli incontri avvengono su appuntamento, con la possibilità di organizzare riunioni
+              in presenza o a distanza, in base alle esigenze dell'impresa.
+            </p>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+              </div>
+              <div>
+                <a href="mailto:info@studiobalsamo.com">info@studiobalsamo.com</a>
+              </div>
+            </div>
+            <div class="sedi-info">
+              <strong>Lo Studio riceve su appuntamento nelle sedi di:</strong>
+              <p>Firenze &bull; Caltanissetta &bull; Agrigento</p>
+            </div>
+          </div>
+          <div class="contact-form animate-on-scroll" style="transition-delay: 0.1s;">
+            <h3>Richiedi un primo contatto</h3>
+            <form id="contact-form" action="https://formspree.io/f/xnnljgoa" method="POST" novalidate>
+              <div class="form-group">
+                <label for="campo-nome">Nome e cognome *</label>
+                <input type="text" id="campo-nome" name="nome" placeholder="Es. Mario Rossi" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="campo-email">Email *</label>
+                <input type="email" id="campo-email" name="email" placeholder="Es. mario@azienda.it" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="campo-azienda">Impresa / Società</label>
+                <input type="text" id="campo-azienda" name="azienda" placeholder="Es. Rossi S.r.l. (opzionale)" autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="campo-messaggio">Messaggio *</label>
+                <textarea id="campo-messaggio" name="messaggio" placeholder="Descrivi brevemente la tua richiesta..." required></textarea>
+              </div>
+              <input type="hidden" name="_subject" value="Nuova richiesta di contatto dal sito Studio Balsamo" />
+              <button type="submit" class="submit-button">Invia richiesta</button>
+              <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text-main">Studio Balsamo</div>
+          <p>
+            Dottori commercialisti specializzati in gestione della crisi d'impresa,
+            ristrutturazione dei debiti e adeguati assetti organizzativi.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigazione</h4>
+          <a href="#focus">Ambiti di intervento</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#team">Il Fondatore</a>
+          <a href="#contatti">Contatti</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sedi</h4>
+          <p>Firenze</p>
+          <p>Caltanissetta</p>
+          <p>Agrigento</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Studio Balsamo – Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Torna all'inizio della pagina">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      // Intersection Observer per animazioni
+      var animatedElements = document.querySelectorAll('.animate-on-scroll');
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        animatedElements.forEach(function(el) { observer.observe(el); });
+      } else {
+        animatedElements.forEach(function(el) { el.classList.add('is-visible'); });
+      }
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var href = this.getAttribute('href');
+          if (href.length > 1) {
+            e.preventDefault();
+            var targetElement = document.querySelector(href);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+              // Chiudi menu mobile se aperto
+              var navLinks = document.querySelector('.nav-links');
+              if (navLinks && navLinks.classList.contains('is-open')) {
+                navLinks.classList.remove('is-open');
+                var mobileBtn = document.querySelector('.mobile-menu-button');
+                if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+              }
+            }
+          }
+        });
+      });
+
+      // Menu mobile
+      var mobileBtn = document.querySelector('.mobile-menu-button');
+      var navLinks = document.querySelector('.nav-links');
+      if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', function() {
+          var isOpen = navLinks.classList.toggle('is-open');
+          mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+
+      // Back to top
+      var backToTop = document.getElementById('back-to-top');
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) {
+            backToTop.classList.add('is-visible');
+          } else {
+            backToTop.classList.remove('is-visible');
+          }
+        }, { passive: true });
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Invio asincrono con Formspree
+      var contactForm = document.getElementById('contact-form');
+      var feedback = document.getElementById('form-feedback');
+      if (contactForm && feedback) {
+        var submitButton = contactForm.querySelector('.submit-button');
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          // Validazione base
+          var nome = contactForm.querySelector('[name="nome"]');
+          var email = contactForm.querySelector('[name="email"]');
+          var messaggio = contactForm.querySelector('[name="messaggio"]');
+
+          if (!nome.value.trim() || !email.value.trim() || !messaggio.value.trim()) {
+            feedback.textContent = 'Compilare tutti i campi obbligatori.';
+            feedback.className = 'form-feedback is-error';
+            return;
+          }
+
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+            feedback.textContent = 'Inserire un indirizzo email valido.';
+            feedback.className = 'form-feedback is-error';
+            return;
+          }
+
+          feedback.textContent = 'Invio in corso...';
+          feedback.className = 'form-feedback is-pending';
+          if (submitButton) submitButton.disabled = true;
+
+          fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(function(response) {
+            if (response.ok) {
+              feedback.textContent = 'Richiesta inviata con successo. Sarete ricontattati al più presto.';
+              feedback.className = 'form-feedback is-success';
+              contactForm.reset();
+            } else {
+              feedback.textContent = 'Si è verificato un problema durante l\'invio. Riprovate tra qualche istante o scrivete a info@studiobalsamo.com.';
+              feedback.className = 'form-feedback is-error';
+            }
+          })
+          .catch(function() {
+            feedback.textContent = 'Impossibile inviare la richiesta. Verificate la connessione e riprovate.';
+            feedback.className = 'form-feedback is-error';
+          })
+          .finally(function() {
+            if (submitButton) submitButton.disabled = false;
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
