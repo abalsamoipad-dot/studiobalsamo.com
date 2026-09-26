@@ -43,3 +43,6 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The user approved the refined site and explicitly requested a CCII/Civil Code citation audit, commit, production deployment and a final cleanup commit. This supersedes earlier prototype-only restrictions.
 - Publish through the existing GitHub Pages main/root configuration and preserve CNAME. Use the existing Formspree endpoint for real user submissions; do not send test messages to the live service.
 - Production metadata must be indexable. Preserve the approved layout and portrait effects. Exclude local screenshots, original photographs, cloud-console exports, exploration files, and machine-specific audit artifacts from public commits.
+
+## Mobile hero readability, 26 September 2026
+- Keep “Le decisioni” fully readable on phones, including short Safari viewports. The portrait must fit within a frame beginning below the title instead of growing upward from a bottom anchor. Preserve the approved desktop composition and current hero height.
