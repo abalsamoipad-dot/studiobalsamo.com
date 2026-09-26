@@ -45,4 +45,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Production metadata must be indexable. Preserve the approved layout and portrait effects. Exclude local screenshots, original photographs, cloud-console exports, exploration files, and machine-specific audit artifacts from public commits.
 
 ## Mobile hero readability, 26 September 2026
-- Keep “Le decisioni” fully readable on phones, including short Safari viewports. The portrait must fit within a frame beginning below the title instead of growing upward from a bottom anchor. Preserve the approved desktop composition and current hero height.
+- The first mobile correction separated the portrait too far from “Le decisioni”; the user prefers the original prominence with a subtler overlap. Raise and enlarge the portrait so the crown just touches the lower edge of the headline, keeping the words readable. Keep the bounded image sizing for short Safari viewports, the approved desktop composition and the current hero height.
